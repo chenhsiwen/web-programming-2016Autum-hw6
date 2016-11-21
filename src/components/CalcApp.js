@@ -2,6 +2,14 @@ import React from 'react';
 
 import CalcButton from './CalcButton';
 // 計算機 App
+
+
+function round2(number,fractionDigits){  
+  const {pow , round} = Math;
+  return round(number*pow(10,fractionDigits))/pow(10,fractionDigits);  
+   
+}  
+
 class CalcApp extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +19,7 @@ class CalcApp extends React.Component {
       op: "",
       mode: 0,
     };
-    //this.handlereset = this.handlereset.bind(this);
+    this.handlereset = this.handlereset.bind(this);
 
   }
   updateState() {
@@ -24,7 +32,7 @@ class CalcApp extends React.Component {
   }
   handlereset() {
     function reset() {
-      console.log(55);
+
       this.state.num = 0;
       this.state.tempnum = 0;
       this.state.op ="";
@@ -102,7 +110,7 @@ class CalcApp extends React.Component {
       this.state.mode = 1;
     }
     else if (op==="="){
-      this.state.mode = 1;
+      this.state.mode = 2;
     }
     this.updateState();
   }
@@ -142,6 +150,7 @@ class CalcApp extends React.Component {
           </div>
           <div className="calc-row">
             <CalcButton onClick={this.handlenumber(0)} className="calc-number-0">0</CalcButton>
+            <CalcButton className="calc-number">.</CalcButton>
             <CalcButton onClick={this.handleoperator("=")} className="calc-operator">=</CalcButton>
           </div>
         </div>

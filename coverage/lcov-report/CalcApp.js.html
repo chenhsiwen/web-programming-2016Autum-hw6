@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for CalcApp.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> CalcApp.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.73% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>40/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">81.82% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>18/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64.29% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.73% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>40/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">490x</span>
+<span class="cline-any cline-yes">490x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">245x</span>
+<span class="cline-any cline-yes">245x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+&nbsp;
+import CalcButton from './CalcButton';
+// 計算機 App
+&nbsp;
+&nbsp;
+function <span class="fstat-no" title="function not covered" >round2(</span>number,fractionDigits){  
+  const {pow , round} = <span class="cstat-no" title="statement not covered" >Math;</span>
+<span class="cstat-no" title="statement not covered" >  return round(number*pow(10,fractionDigits))/pow(10,fractionDigits);  </span>
+   
+}  
+&nbsp;
+class CalcApp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      num: 0,
+      tempnum: 0,
+      op: "",
+      mode: 0,
+    };
+    this.handlereset = this.handlereset.bind(this);
+&nbsp;
+  }
+  updateState() {
+    this.setState({
+      num: this.state.num,
+      tempnum: this.state.tempnum,
+      op: this.state.op,
+      mode: this.state.mode,
+    })
+  }
+  handlereset() {
+    function <span class="fstat-no" title="function not covered" >reset(</span>) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.state.num = 0;</span>
+<span class="cstat-no" title="statement not covered" >      this.state.tempnum = 0;</span>
+<span class="cstat-no" title="statement not covered" >      this.state.op ="";</span>
+<span class="cstat-no" title="statement not covered" >      this.state.mode = 0;</span>
+<span class="cstat-no" title="statement not covered" >      this.updateState();</span>
+    }
+    reset = reset.bind(this);
+    return reset;
+&nbsp;
+  }
+<span class="fstat-no" title="function not covered" >  sh</span>owNotImplemented() {
+<span class="cstat-no" title="statement not covered" >    console.warn('This function is not implemented yet.');</span>
+  }
+  handlenumber(temp) {
+    function number() {
+      if (this.state.mode === 0 || this.state.mode === 2){
+        this.state.num = temp + 10*this.state.num;
+      }
+      else <span class="missing-if-branch" title="else path not taken" >E</span>if (this.state.mode === 1){
+        this.state.tempnum = this.state.num;
+        this.state.num = temp;
+        this.state.mode = 2;
+      }
+      this.updateState();
+    }
+    number = number.bind(this);
+    return number;
+  }
+  
+  handleoperator(temp) {
+    function operator() {
+      if(this.state.mode === 0 || this.state.mode === 1) {       
+        this.state.mode = 1;
+      }
+      else <span class="missing-if-branch" title="else path not taken" >E</span>if (this.state.mode === 2){
+        console.log(this.state.op);
+        this.calculate();
+        this.state.mode = 1;
+      }
+      this.state.op = temp;
+&nbsp;
+      this.updateState();
+    }
+    operator = operator.bind(this);
+    return operator;
+  }
+<span class="fstat-no" title="function not covered" >  ha</span>ndlepercent (){
+    function <span class="fstat-no" title="function not covered" >percent(</span>) {
+<span class="cstat-no" title="statement not covered" >      this.state.num = this.state.num /100 ; </span>
+<span class="cstat-no" title="statement not covered" >      this.state.mode = 1;</span>
+<span class="cstat-no" title="statement not covered" >      this.updateState();</span>
+    }
+<span class="cstat-no" title="statement not covered" >    percent = percent.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    return percent;</span>
+   
+&nbsp;
+  }
+  calculate(){
+    const {num, tempnum, op } = this.state;
+   
+    if (op==="+"){
+      this.state.num = tempnum + num;
+      this.state.mode = 1;
+    }
+    else if (op==="-"){
+      this.state.num = tempnum - num;
+      this.state.mode = 1;
+    }
+    else if (op==="×"){
+      this.state.num = tempnum * num;
+      this.state.mode = 1;
+    }
+    else <span class="missing-if-branch" title="if path not taken" >I</span>if (op==="÷"){
+<span class="cstat-no" title="statement not covered" >      this.state.num = tempnum / num;</span>
+<span class="cstat-no" title="statement not covered" >      this.state.mode = 1;</span>
+    }
+    else <span class="missing-if-branch" title="else path not taken" >E</span>if (op==="="){
+      this.state.mode = 2;
+    }
+    this.updateState();
+  }
+  
+ 
+&nbsp;
+  render() {
+    return (
+      &lt;div className="calc-app"&gt;
+        &lt;div className="calc-container"&gt;
+          &lt;div className="calc-output"&gt;
+            &lt;div className="calc-display"&gt;{this.state.num}&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div className="calc-row"&gt;
+            &lt;CalcButton onClick={this.handlereset}&gt;AC&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.invert}&gt;+/-&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handlepercent}&gt;%&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handleoperator("÷")} className="calc-operator"&gt;÷&lt;/CalcButton&gt;
+          &lt;/div&gt;
+          &lt;div className="calc-row"&gt;
+            &lt;CalcButton onClick={this.handlenumber(7)} className="calc-number"&gt;7&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handlenumber(8)} className="calc-number"&gt;8&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handlenumber(9)} className="calc-number"&gt;9&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handleoperator("×")} className="calc-operator"&gt;×&lt;/CalcButton&gt;
+          &lt;/div&gt;
+          &lt;div className="calc-row"&gt;
+            &lt;CalcButton onClick={this.handlenumber(4)} className="calc-number"&gt;4&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handlenumber(5)} className="calc-number"&gt;5&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handlenumber(6)} className="calc-number"&gt;6&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handleoperator("-")} className="calc-operator"&gt;-&lt;/CalcButton&gt;
+          &lt;/div&gt;
+          &lt;div className="calc-row"&gt;
+            &lt;CalcButton onClick={this.handlenumber(1)} className="calc-number"&gt;1&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handlenumber(2)} className="calc-number"&gt;2&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handlenumber(3)} className="calc-number"&gt;3&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handleoperator("+")} className="calc-operator"&gt;+&lt;/CalcButton&gt;
+          &lt;/div&gt;
+          &lt;div className="calc-row"&gt;
+            &lt;CalcButton onClick={this.handlenumber(0)} className="calc-number-0"&gt;0&lt;/CalcButton&gt;
+            &lt;CalcButton className="calc-number"&gt;.&lt;/CalcButton&gt;
+            &lt;CalcButton onClick={this.handleoperator("=")} className="calc-operator"&gt;=&lt;/CalcButton&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+&nbsp;
+export default CalcApp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Nov 21 2016 12:56:00 GMT+0800 (CST)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>
